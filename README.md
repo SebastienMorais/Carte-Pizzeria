@@ -31,8 +31,8 @@ Pour les autres, tappez `python3 -m pip install -U pytest` et `python3 -m pip in
 Afin de rendre votre dépôt plus "sérieux" votre patron vous demande de réaliser quelque modification à votre dépôt:
 
 - Mise en place d'une CI avec l'exécution des tests unitaires et une mesure du niveau de couverture du code. Pour cela, vous allez utiliser le package pytest-cov et définir que le niveau de couverture du code est insuffisant s'il est inférieur à 80% (`pytest --cov=. --cov-fail-under=80`, cf https://pytest-cov.readthedocs.io/en/latest/config.html)
-- Desactivation du push dans la master ! 
-- Activation des PR/MR si et seulement si le pipeline est OK ! 
+~~- Desactivation du push dans la master ! ~~
+~~- Activation des PR/MR si et seulement si le pipeline est OK ! ~~
 
 # Exercice 4 - Elements de la carte et évolution de la carte
 
