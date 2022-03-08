@@ -4,7 +4,6 @@
 class CartePizzeriaException(Exception):
     """Exception dedicated to CartePizzeria
     """
-    pass
 
 
 class CartePizzeria:
@@ -39,7 +38,7 @@ class CartePizzeria:
         """Remove a pizza
         """
         found = False
-        for pos, inner_pizza in enumerate(self.pizzas):
+        for _, inner_pizza in enumerate(self.pizzas):
             if inner_pizza.name == name:
                 found = True
                 break
