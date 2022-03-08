@@ -11,7 +11,7 @@ def test_carte_pizza_is_empty():
     """
     carte = CartePizzeria()
     carte._CartePizzeria__pizzas = []
-    assert c.is_empty()
+    assert carte.is_empty()
 
 # Setup de lenvironnement de test en utilisant un patch
 @patch('carte_pizzeria.CartePizzeria.pizzas', new_callable=PropertyMock)
@@ -28,7 +28,7 @@ def test_carte_pizza_is_not_empty():
     carte = CartePizzeria()
     pizza = Mock()
     carte._CartePizzeria__pizzas = [pizza]
-    assert not c.is_empty()
+    assert not carte.is_empty()
 
 @patch('carte_pizzeria.CartePizzeria.pizzas', new_callable=PropertyMock)
 def test_carte_pizza_is_not_empty_with_patch(mock_pizzas):
