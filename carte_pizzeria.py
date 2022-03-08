@@ -38,11 +38,10 @@ class CartePizzeria:
         """Remove a pizza
         """
         found = False
-        for _, inner_pizza in enumerate(self.pizzas):
+        for pos, inner_pizza in enumerate(self.pizzas):
             if inner_pizza.name == name:
                 found = True
                 break
         if not found:
             raise CartePizzeriaException(f"pizza {name} is not registered")
         del self.pizzas[pos]
-

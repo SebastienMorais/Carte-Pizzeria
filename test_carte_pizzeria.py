@@ -1,11 +1,11 @@
 """Test Carte Pizzeria Class
 """
-import mock
 from mock import Mock, patch, PropertyMock
 from carte_pizzeria import CartePizzeria
 
 # Setup de l'environnement de test en modifiant directement l'attribut
 # privé via l'attribut _CartePizzeria__pizzas
+# pylint: disable=W0212
 def test_carte_pizza_is_empty():
     """Test carte pizza is empty without patch
     """
@@ -22,6 +22,7 @@ def test_carte_pizza_is_empty_with_patch(mock_pizzas):
     mock_pizzas.return_value = []
     assert carte.is_empty()
 
+# pylint: disable=W0212
 def test_carte_pizza_is_not_empty():
     """Test carte pizza is not empty without patch
     """
@@ -38,4 +39,3 @@ def test_carte_pizza_is_not_empty_with_patch(mock_pizzas):
     pizza = Mock()
     mock_pizzas.return_value = [pizza]
     assert not carte.is_empty()
-
